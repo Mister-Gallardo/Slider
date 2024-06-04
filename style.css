@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  #wrapper {
+    width: 100%;
+    max-width: 964px;
+    position: relative;
+  }
+  
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  #next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  #content {
+    display: grid;
+
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  
+  .item {
+    position: relative;
+    width: 180px;
+    height: 230px;
+    border-radius: 8px;
+    background: url(https://sun9-72.userapi.com/impf/c305615/v305615683/7c91/jhJwTZXOJ3o.jpg?size=604x377&quality=96&sign=b31f8406a559cab5f70dd859bbf21275&c_uniq_tag=4PqhrRGAWv5uhH_0q9nDP35yKW8RuyPu1LpU2aRWJL4&type=album) no-repeat center;
+    background-size: cover;
+  }
+  
+  .item:hover {
+    cursor: pointer;
+  }
+  
+  .item__header {
+    display: flex;
+    padding: 3px 5px;
+    justify-content: space-between;
+  }
+  
+  .item__add {
+    font-size: 7px;
+    font-weight: 900;
+    height: fit-content;
+    background-color: white;
+    display: inline-block;
+    padding: 4px 5px;
+    border-radius: 15px;
+    transition: .2s;
+  }
+  
+  .item__add:hover {
+    cursor: pointer;
+    transition: .2s;
+    background-color: black;
+    color: white;
+  }
+  
+  .item__info {
+    font-size: 10px;
+    font-weight: 900;
+    background-color: white;
+    padding: 0px 8px;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
+  
+  .tooltip {
+      display: none;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-radius: 7px 7px 0px 0px;
+      background-color: #f9f9f9;
+      color: red;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 7px 5px;
+  }
+  
+  .item__text {
+    box-sizing: border-box;
+    background-color: rgb(200, 200, 200);
+    border-radius: 0px 0px 7px 7px;
+    color: black;
+    font-weight: 900;
+    font-size: 17px;
+    position: absolute;
+    bottom: 0px;
+    margin: 0px;
+    padding: 3px 5px;
+    width: 100%;
+  }
